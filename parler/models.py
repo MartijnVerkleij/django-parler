@@ -1081,10 +1081,10 @@ class TranslatedFieldsModelMixin:
             else:
                 # Currently not allowing to replace existing model fields with translatable fields.
                 # That would be a nice feature addition however.
-                if not isinstance(shared_field, (models.Field, TranslatedFieldDescriptor)):
-                    raise TypeError(
-                        f"The model '{shared_model.__name__}' already has a field named '{name}'"
-                    )
+                #if not isinstance(shared_field, (models.Field, TranslatedFieldDescriptor)):
+                #    raise TypeError(
+                #        f"The model '{shared_model.__name__}' already has a field named '{name}'"
+                #    )
 
                 # When the descriptor was placed on an abstract model,
                 # it doesn't point to the real model that holds the translations_model
